@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <header className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+    <header className="bg-teal-900 text-white shadow-md sticky top-0 z-50">
       <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
         <div className="flex items-center space-x-4">
           <img
@@ -11,24 +11,30 @@ export default function NavBar() {
             alt="Logo"
             className="h-10 w-auto transition-transform transform hover:scale-110"
           />
-          <span className="text-xl font-extrabold text-gradient bg-gradient-to-r from-purple-500 to-blue-500">
-            The Nexus Games
-          </span>
         </div>
 
         <ul className="flex space-x-8 text-lg font-semibold">
           <li>
-            <Link href="/" className="nav-link">
+            <Link
+              href="/"
+              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded"
+            >
               Inicio
             </Link>
           </li>
           <li>
-            <Link href="/discover" className="nav-link">
+            <Link
+              href="/discover"
+              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded"
+            >
               Descubre
             </Link>
           </li>
           <li>
-            <Link href="/about" className="nav-link">
+            <Link
+              href="/about"
+              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded"
+            >
               Sobre Nosotros
             </Link>
           </li>
@@ -36,7 +42,7 @@ export default function NavBar() {
 
         <div className="relative flex items-center">
           <input
-            className="bg-gray-800 text-white px-6 py-2 rounded-full w-72 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+            className="bg-teal-800 shadow-md text-white px-6 py-2 rounded-full w-72 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
             type="text"
             placeholder="Busca tus videojuegos..."
           />
@@ -61,13 +67,13 @@ export default function NavBar() {
         <div className="flex space-x-4">
           <Link
             href="/login"
-            className="btn-nav bg-gray-700 hover:bg-gray-600"
+            className="btn-nav shadow-md bg-teal-800 hover:bg-teal-500 px-6 py-2 rounded"
           >
             Iniciar Sesión
           </Link>
           <Link
             href="/register"
-            className="btn-nav bg-blue-600 hover:bg-blue-500"
+            className="btn-nav shadow-md bg-white text-teal-700 hover:bg-teal-500 px-6 py-2 rounded"
           >
             Registrarse
           </Link>
