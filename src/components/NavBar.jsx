@@ -6,7 +6,7 @@ import RegisterButton from "./buttons/RegisterButton";
 export default function NavBar() {
   return (
     <header className="bg-transparent text-white shadow-md sticky top-0 z-50">
-      <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+      <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto backdrop-blur-lg bg-white bg-opacity-20">
         <div className="flex items-center space-x-4">
           <img
             src="/img/logo-white.png"
@@ -19,7 +19,7 @@ export default function NavBar() {
           <li>
             <Link
               href="/"
-              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded"
+              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded transition-all"
             >
               Inicio
             </Link>
@@ -27,7 +27,7 @@ export default function NavBar() {
           <li>
             <Link
               href="/discover"
-              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded"
+              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded transition-all"
             >
               Juegos
             </Link>
@@ -36,16 +36,15 @@ export default function NavBar() {
 
         <div className="relative flex items-center">
           <input
-            className="bg-teal-800 shadow-md text-white px-6 py-2 rounded-full w-72 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
+            className="bg-teal-800 text-white px-6 py-2 rounded-full w-72 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
             type="text"
             placeholder="Busca tus videojuegos..."
           />
-
         </div>
 
         <div className="flex space-x-4">
-          <LoginButton/>
-          <RegisterButton/>
+          <LoginButton />
+          <RegisterButton />
         </div>
       </nav>
     </header>
