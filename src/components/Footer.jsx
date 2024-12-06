@@ -17,7 +17,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="mt-6 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} The Nexus Games.</p>
+        <p>&copy; {typeof window !== 'undefined' && new Date().getFullYear()} The Nexus Games.</p>
         </div>
       </div>
     </footer>
