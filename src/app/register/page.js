@@ -1,5 +1,11 @@
-'use client'
+"use client";
 
-const { useState } = require("react")
+import { generateViewport } from "libreria-o-modulo"; // Ejemplo: donde importes esta función.
 
-useState
+export default function RegisterPage() {
+  React.useEffect(() => {
+    const viewport = generateViewport();
+    console.log(viewport);
+  }, []);
+  return <div>Registro</div>;
+}
