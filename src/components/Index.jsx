@@ -8,7 +8,7 @@ export default function Index() {
 
         <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-20 backdrop-blur-lg p-6 rounded-lg shadow-lg border border-gray-200 transition-all">
           <div className="flex-1">
-            <h2 className="text-xl text-gray-900 font-bold mb-4">¿Qué es The Nexus Games?</h2>
+            <h2 className="text-3xl text-gray-900 font-bold mb-4">¿Qué es The Nexus Games?</h2>
             <p className="text-gray-800">
               The Nexus Games es el lugar ideal para gestionar tu colección de videojuegos de forma virtual.
               Mantén tu biblioteca actualizada, califica los títulos que has jugado y añade los próximos lanzamientos
@@ -35,7 +35,7 @@ export default function Index() {
             />
           </div>
           <div className="flex-1">
-            <h2 className="text-xl text-gray-900 font-bold mb-4">El motivo de este proyecto</h2>
+            <h2 className="text-3xl text-gray-900 font-bold mb-4">El motivo de este proyecto</h2>
             <p className="text-gray-800">
               Este proyecto es el resultado final de mis estudios en desarrollo web, creado para gestionar mi colección de videojuegos.
               Al no encontrar una herramienta adecuada para esto, decidí desarrollar The Nexus Games, una plataforma donde puedo organizar
@@ -49,7 +49,7 @@ export default function Index() {
 
         <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-20 backdrop-blur-lg p-6 rounded-lg shadow-lg border border-gray-200 transition-all">
           <div className="flex-1">
-            <h2 className="text-xl text-gray-900 font-bold mb-4">Organización</h2>
+            <h2 className="text-3xl text-gray-900 font-bold mb-4">Organización</h2>
             <p className="text-gray-800">
               La organización de la colección se basa en una estructura clara y fácil de navegar. Cada videojuego se clasifica con detalles
               como el título, género, estado (jugado, por jugar, en progreso) y plataforma. Además, se puede añadir una valoración personal
