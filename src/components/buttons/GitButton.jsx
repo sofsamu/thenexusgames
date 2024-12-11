@@ -2,21 +2,21 @@ import React from "react";
 
 export default function GitButton() {
   return (
-    <div>
+    <div className="flex justify-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/sofsamu/thenexusgames"
-        className="btn-nav shadow-md bg-white text-teal-700 hover:bg-teal-500 hover:text-white px-2 py-2 rounded"
+        className="flex items-center justify-center bg-white bg-opacity-30 backdrop-blur-md text-white hover:bg-teal-500 px-6 py-2 rounded-full shadow-md border border-gray-200 transition-all space-x-2"
       >
-        GitHub
+        <span>GitHub</span>
         <svg
-          className="gitsvg mx-2"
           viewBox="0 0 256 256"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMinYMin meet"
           width="24"
           height="24"
+          className="text-white fill-current"
         >
           <g id="SVGRepo_iconCarrier">
             <g fill="currentColor">

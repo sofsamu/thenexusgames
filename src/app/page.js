@@ -1,3 +1,4 @@
+import GitButton from "@/components/buttons/GitButton";
 import Footer from "@/components/Footer";
 import Index from "@/components/Index";
 import NavBar from "@/components/NavBar";

@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getPopularGames } from '@/app/api/apiRawg';  // Importa correctamente la función desde la ruta de tu API
+import { getPopularGames } from '@/app/api/apiRawg'; 
 
 const TrendingGames = () => {
   const [games, setGames] = useState([]);
@@ -10,13 +10,13 @@ const TrendingGames = () => {
 
   useEffect(() => {
     const fetchGames = async () => {
-      const popularGames = await getPopularGames(10);  // Llama a la función que ya tienes definida
+      const popularGames = await getPopularGames(10); 
       setGames(popularGames);
       setLoading(false);
     };
 
     fetchGames();
-  }, []); // Dependencia vacía para que se ejecute solo una vez al montar el componente
+  }, []); 
 
   const handleGameClick = (id) => {
     router.push(`/gameDetails/${id}`);
