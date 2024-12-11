@@ -5,8 +5,8 @@ import RegisterButton from "./buttons/RegisterButton";
 
 export default function NavBar() {
   return (
-    <header className="bg-transparent text-white shadow-md sticky top-0 z-50">
-      <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto backdrop-blur-lg bg-white bg-opacity-20">
+    <header className="bg-transparent text-white shadow-md sticky top-0 z-50 backdrop-blur-lg bg-white bg-opacity-20">
+      <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
         <div className="flex items-center space-x-4">
           <img
             src="/img/logo-white.png"
