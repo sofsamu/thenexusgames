@@ -4,8 +4,6 @@ export default function Index() {
   return (
     <div>
       <main className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl text-gray-900 font-semibold mb-8">The Nexus Games</h1>
-
         <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-20 backdrop-blur-lg p-6 rounded-lg shadow-lg border border-gray-200 transition-all">
           <div className="flex-1">
             <h2 className="text-3xl text-gray-900 font-bold mb-4">¿Qué es The Nexus Games?</h2>
