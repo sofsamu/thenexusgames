@@ -5,21 +5,21 @@ import RegisterButton from "./buttons/RegisterButton";
 
 export default function NavBar() {
   return (
-    <header className="bg-transparent text-white shadow-md sticky top-0 z-50 backdrop-blur-lg bg-white bg-opacity-20">
+    <header className="bg-white text-gray-800 shadow-md sticky top-0 z-50 backdrop-blur-lg bg-opacity-80">
       <nav className="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto">
+
         <div className="flex items-center space-x-4">
           <img
-            src="/img/logo-white.png"
+            src="/img/logo-gray.png" // Logo con estilo minimalista
             alt="Logo"
-            className="h-10 w-auto transition-transform transform hover:scale-110"
+            className="h-8 w-auto transition-transform transform hover:scale-105"
           />
         </div>
-
-        <ul className="flex space-x-8 text-lg font-semibold">
+        <ul className="flex space-x-6 text-sm font-medium">
           <li>
             <Link
               href="/"
-              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded transition-all"
+              className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md transition-all duration-200"
             >
               Inicio
             </Link>
@@ -27,21 +27,20 @@ export default function NavBar() {
           <li>
             <Link
               href="/discover"
-              className="nav-link hover:bg-teal-500 hover:text-white px-4 py-2 rounded transition-all"
+              className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md transition-all duration-200"
             >
               Juegos
             </Link>
           </li>
         </ul>
-
-        <div className="relative flex items-center">
+        <div className="relative flex items-center w-64">
           <input
-            className="bg-teal-800 text-white px-6 py-2 rounded-full w-72 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
+            className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full w-full focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition-all duration-200"
             type="text"
-            placeholder="Busca tus videojuegos..."
+            placeholder="Buscar..."
           />
+          <span className="absolute right-3 text-gray-500">🔍</span>
         </div>
-
         <div className="flex space-x-4">
           <LoginButton />
           <RegisterButton />

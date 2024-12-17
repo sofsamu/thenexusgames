@@ -4,10 +4,12 @@ export default function Index() {
   return (
     <div>
       <main className="max-w-7xl mx-auto px-4">
-        <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-20 backdrop-blur-lg p-6 rounded-lg shadow-lg border border-gray-200 transition-all">
+        
+        {/* Sección 1 */}
+        <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-xl border border-gray-300 transition-all">
           <div className="flex-1">
-            <h2 className="text-3xl text-gray-900 font-bold mb-4">¿Qué es The Nexus Games?</h2>
-            <p className="text-gray-800">
+            <h2 className="text-3xl text-gray-900 font-semibold mb-4">¿Qué es The Nexus Games?</h2>
+            <p className="text-gray-700">
               The Nexus Games es el lugar ideal para gestionar tu colección de videojuegos de forma virtual.
               Mantén tu biblioteca actualizada, califica los títulos que has jugado y añade los próximos lanzamientos
               a tu lista de deseos. Comparte tu pasión por los videojuegos con tus amigos, sigue su actividad y descubre
@@ -24,7 +26,8 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-20 backdrop-blur-lg p-6 rounded-lg shadow-lg border border-gray-200 transition-all">
+        {/* Sección 2 */}
+        <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-xl border border-gray-300 transition-all">
           <div className="flex-1">
             <img
               src="/img/Background-2.png"
@@ -33,8 +36,8 @@ export default function Index() {
             />
           </div>
           <div className="flex-1">
-            <h2 className="text-3xl text-gray-900 font-bold mb-4">El motivo de este proyecto</h2>
-            <p className="text-gray-800">
+            <h2 className="text-3xl text-gray-900 font-semibold mb-4">El motivo de este proyecto</h2>
+            <p className="text-gray-700">
               Este proyecto es el resultado final de mis estudios en desarrollo web, creado para gestionar mi colección de videojuegos.
               Al no encontrar una herramienta adecuada para esto, decidí desarrollar The Nexus Games, una plataforma donde puedo organizar
               mis juegos, calificar los que he jugado y añadir los que quiero.
@@ -45,10 +48,11 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-20 backdrop-blur-lg p-6 rounded-lg shadow-lg border border-gray-200 transition-all">
+        {/* Sección 3 */}
+        <section className="flex items-center space-x-8 my-8 bg-white bg-opacity-30 backdrop-blur-lg p-6 rounded-lg shadow-xl border border-gray-300 transition-all">
           <div className="flex-1">
-            <h2 className="text-3xl text-gray-900 font-bold mb-4">Organización</h2>
-            <p className="text-gray-800">
+            <h2 className="text-3xl text-gray-900 font-semibold mb-4">Organización</h2>
+            <p className="text-gray-700">
               La organización de la colección se basa en una estructura clara y fácil de navegar. Cada videojuego se clasifica con detalles
               como el título, género, estado (jugado, por jugar, en progreso) y plataforma. Además, se puede añadir una valoración personal
               y comentarios, lo que permite un seguimiento completo. La interfaz está diseñada para mostrar la colección de forma ordenada
@@ -63,7 +67,7 @@ export default function Index() {
             />
           </div>
         </section>
-        
+
       </main>
     </div>
   );

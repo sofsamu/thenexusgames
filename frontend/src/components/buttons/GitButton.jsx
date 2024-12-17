@@ -7,7 +7,7 @@ export default function GitButton() {
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/sofsamu/thenexusgames"
-        className="flex items-center justify-center bg-white bg-opacity-30 backdrop-blur-md text-white hover:bg-teal-500 px-6 py-2 rounded-full shadow-md border border-gray-200 transition-all space-x-2"
+        className="flex items-center justify-center bg-gray-200 text-gray-700 px-5 py-2 rounded-md shadow-sm border border-gray-300 hover:bg-gray-300 hover:text-green-600 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-200 space-x-3"
       >
         <span>GitHub</span>
         <svg
@@ -16,7 +16,7 @@ export default function GitButton() {
           preserveAspectRatio="xMinYMin meet"
           width="24"
           height="24"
-          className="text-white fill-current"
+          className="fill-current"
         >
           <g id="SVGRepo_iconCarrier">
             <g fill="currentColor">

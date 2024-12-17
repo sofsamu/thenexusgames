@@ -5,13 +5,13 @@ import { useRouter } from 'next/navigation';
 const TrendingGames = () => {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // Para manejar errores
+  const [error, setError] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
     const fetchGames = async () => {
-      setLoading(true); // Empieza el estado de carga
-      setError(null); // Resetea el error
+      setLoading(true);
+      setError(null);
 
       try {
         const response = await fetch('https://api.rawg.io/api/games?key=ebfb1bdef5bf4d1dafb2b3fc19a3beb9&page_size=10&ordering=-added');
@@ -24,14 +24,14 @@ const TrendingGames = () => {
         setGames(data.results);
       } catch (error) {
         console.error('Error al obtener los juegos populares:', error);
-        setError(error.message); // Almacena el error en el estado
+        setError(error.message);
       } finally {
-        setLoading(false); // Finaliza el estado de carga
+        setLoading(false);
       }
     };
 
     fetchGames();
-  }, []); // Solo se ejecuta una vez al cargar el componente
+  }, []);
 
   const handleGameClick = (id) => {
     router.push(`/gameDetails/${id}`);
@@ -40,7 +40,7 @@ const TrendingGames = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[200px]">
-        <p className="text-gray-600 text-lg">Cargando juegos en tendencia...</p>
+        <p className="text-gray-300 text-lg">Cargando juegos en tendencia...</p>
       </div>
     );
   }
@@ -54,23 +54,23 @@ const TrendingGames = () => {
   }
 
   return (
-    <div className="p-6 bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg glassmorphic-container">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
+    <div className="p-6">
+      <h2 className="text-3xl font-semibold text-center text-white mb-8">
         Juegos en Tendencia
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {games.map((game) => (
           <div
             key={game.id}
-            className="p-4 bg-white bg-opacity-30 backdrop-blur-lg rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 glassmorphic-card"
+            className="p-4 bg-gray-700 bg-opacity-70 backdrop-blur-lg rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out cursor-pointer"
             onClick={() => handleGameClick(game.id)}
           >
             <img
               src={game.background_image}
               alt={game.name}
-              className="w-full h-48 object-cover rounded-md mb-4"
+              className="w-full h-48 object-cover rounded-md mb-4 shadow-md"
             />
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 text-center truncate">
+            <h3 className="text-lg font-semibold text-white text-center truncate">
               {game.name}
             </h3>
           </div>

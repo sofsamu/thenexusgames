@@ -21,12 +21,3 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Efecto de enlace */
-.nav-link {
-  color: white;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #319795;
-}
