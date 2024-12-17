@@ -1,8 +1,9 @@
 'use client';
-import Footer from '../../../components/Footer';
-import NavBar from '../../../components/NavBar';
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';  // Correcto uso de useParams
+import NavBar from 'src/components/NavBar';
+import Footer from 'src/components/Footer';
 
 export default function GameDetailsPage() {
   const { id } = useParams();  // Obtenemos el 'id' de la URL
@@ -78,7 +79,7 @@ export default function GameDetailsPage() {
           </div>
         </div>
       </div>
-      <Footer />
+     <Footer/>
     </div>
   );
 }

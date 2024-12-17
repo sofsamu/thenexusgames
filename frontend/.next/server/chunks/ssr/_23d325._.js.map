@@ -2,8 +2,8 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/samuelgarciaromero/Documents/GitHub/thenexusgames/src/app/page.js"],"sourcesContent":["import NavBar from \"@/components/NavBar\";\nimport Image from \"next/image\";\n\nexport default function Home() {\n  return (\n    <div>\n      <NavBar/>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC,4HAAA,CAAA,UAAM;;;;;;;;;;AAGb"}},
-    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
-    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/samuelgarciaromero/Documents/GitHub/thenexusgames/frontend/src/app/page.js"],"sourcesContent":["\n\nexport default function Home() {\n  return (\n    <div className=\"background\">\n\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;;;;;AAInB"}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 32, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }

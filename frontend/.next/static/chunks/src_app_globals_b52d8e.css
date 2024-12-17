@@ -1,4 +1,4 @@
-/* [project]/frontend/src/app/globals.css [app-client] (css) */
+/* [project]/src/app/globals.css [app-client] (css) */
 *, :before, :after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -663,6 +663,11 @@ img, video {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
 }
 
 .text-white {

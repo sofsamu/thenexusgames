@@ -1,22 +1,37 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getPopularGames } from '../app/api/apiRawg'; 
 
 const TrendingGames = () => {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null); // Para manejar errores
   const router = useRouter();
 
   useEffect(() => {
     const fetchGames = async () => {
-      const popularGames = await getPopularGames(10); 
-      setGames(popularGames);
-      setLoading(false);
+      setLoading(true); // Empieza el estado de carga
+      setError(null); // Resetea el error
+
+      try {
+        const response = await fetch('https://api.rawg.io/api/games?key=ebfb1bdef5bf4d1dafb2b3fc19a3beb9&page_size=10&ordering=-added');
+        
+        if (!response.ok) {
+          throw new Error('No se pudo obtener la información de los juegos');
+        }
+
+        const data = await response.json();
+        setGames(data.results);
+      } catch (error) {
+        console.error('Error al obtener los juegos populares:', error);
+        setError(error.message); // Almacena el error en el estado
+      } finally {
+        setLoading(false); // Finaliza el estado de carga
+      }
     };
 
     fetchGames();
-  }, []); 
+  }, []); // Solo se ejecuta una vez al cargar el componente
 
   const handleGameClick = (id) => {
     router.push(`/gameDetails/${id}`);
@@ -26,6 +41,14 @@ const TrendingGames = () => {
     return (
       <div className="flex justify-center items-center min-h-[200px]">
         <p className="text-gray-600 text-lg">Cargando juegos en tendencia...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center min-h-[200px]">
+        <p className="text-red-600 text-lg">Error: {error}</p>
       </div>
     );
   }

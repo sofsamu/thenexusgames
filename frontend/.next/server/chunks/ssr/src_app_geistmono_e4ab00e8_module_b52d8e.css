@@ -1,4 +1,4 @@
-/* [project]/frontend/src/app/geistmono_e4ab00e8.module.css [app-client] (css) */
+/* [project]/src/app/geistmono_e4ab00e8.module.css [app-client] (css) */
 @font-face {
   font-family: geistMono;
   src: url("/_next/static/media/GeistMonoVF-s.p.a9159d35.woff") format("woff");
@@ -15,11 +15,11 @@
   size-adjust: 131.49%;
 }
 
-.geistmono_e4ab00e8-module__GDgYJW__className {
+.geistmono_e4ab00e8-module___UNRQW__className {
   font-family: geistMono, geistMono Fallback;
 }
 
-.geistmono_e4ab00e8-module__GDgYJW__variable {
+.geistmono_e4ab00e8-module___UNRQW__variable {
   --font-geist-mono: "geistMono", "geistMono Fallback";
 }
 

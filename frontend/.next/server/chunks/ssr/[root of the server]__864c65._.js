@@ -43,24 +43,35 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$api$2f$apiRawg$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/api/apiRawg.js [app-ssr] (ecmascript)"); // Importa correctamente la función desde la ruta de tu API
 'use client';
-;
 ;
 ;
 ;
 const TrendingGames = ()=>{
     const [games, setGames] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null); // Para manejar errores
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchGames = async ()=>{
-            const popularGames = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$api$2f$apiRawg$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getPopularGames"])(10); // Llama a la función que ya tienes definida
-            setGames(popularGames);
-            setLoading(false);
+            setLoading(true); // Empieza el estado de carga
+            setError(null); // Resetea el error
+            try {
+                const response = await fetch('https://api.rawg.io/api/games?key=ebfb1bdef5bf4d1dafb2b3fc19a3beb9&page_size=10&ordering=-added');
+                if (!response.ok) {
+                    throw new Error('No se pudo obtener la información de los juegos');
+                }
+                const data = await response.json();
+                setGames(data.results);
+            } catch (error) {
+                console.error('Error al obtener los juegos populares:', error);
+                setError(error.message); // Almacena el error en el estado
+            } finally{
+                setLoading(false); // Finaliza el estado de carga
+            }
         };
         fetchGames();
-    }, []); // Dependencia vacía para que se ejecute solo una vez al montar el componente
+    }, []); // Solo se ejecuta una vez al cargar el componente
     const handleGameClick = (id)=>{
         router.push(`/gameDetails/${id}`);
     };
@@ -72,12 +83,32 @@ const TrendingGames = ()=>{
                 children: "Cargando juegos en tendencia..."
             }, void 0, false, {
                 fileName: "[project]/src/components/TrendingGames.jsx",
-                lineNumber: 28,
+                lineNumber: 43,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/TrendingGames.jsx",
-            lineNumber: 27,
+            lineNumber: 42,
+            columnNumber: 7
+        }, this);
+    }
+    if (error) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex justify-center items-center min-h-[200px]",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-red-600 text-lg",
+                children: [
+                    "Error: ",
+                    error
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/TrendingGames.jsx",
+                lineNumber: 51,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/TrendingGames.jsx",
+            lineNumber: 50,
             columnNumber: 7
         }, this);
     }
@@ -89,7 +120,7 @@ const TrendingGames = ()=>{
                 children: "Juegos en Tendencia"
             }, void 0, false, {
                 fileName: "[project]/src/components/TrendingGames.jsx",
-                lineNumber: 35,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -104,7 +135,7 @@ const TrendingGames = ()=>{
                                 className: "w-full h-48 object-cover rounded-md mb-4"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TrendingGames.jsx",
-                                lineNumber: 45,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -112,24 +143,24 @@ const TrendingGames = ()=>{
                                 children: game.name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TrendingGames.jsx",
-                                lineNumber: 50,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, game.id, true, {
                         fileName: "[project]/src/components/TrendingGames.jsx",
-                        lineNumber: 40,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/TrendingGames.jsx",
-                lineNumber: 38,
+                lineNumber: 61,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/TrendingGames.jsx",
-        lineNumber: 34,
+        lineNumber: 57,
         columnNumber: 5
     }, this);
 };
